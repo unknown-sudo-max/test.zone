@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+	<title>Get Data</title>
+</head>
+<body>
+	<div class="cll" style="top: 100px; position: relative;">
+<div  class="card text-center">
+	<div class="card-header">
+<p>test.zone.m_g_x , v 0.1</p>
+  <p>  Get Name BY National ID</p>
+  </div>
+	<div class="container card-body">
+		<h5 class="card-title left">GET DATA</h5>
+		<form method="get">
+			<div class="form-floating mb-3">
+				
+				<input type="text" class="form-control" name="NID" maxlength="14" id="NID" oninput= "this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1');" placeholder="National ID">
+				<label for="NID">National ID :</label>
+			</div>
+<div class="col">
+			<input type="submit" name="query" value="Query" style=" " onclick="Query()"/ class="btn btn-secondary btn-lg" >
+			</div>
+			<br>
+			<p>elageaza@crh.com<p/>
+		</form>
+	</div>
+ <div class="card-footer text-muted">
+ <p> &#169; Powered BY M_G_X  </p><p> (CEO & Founder of ONE_CODE Co.)</p>
+  </div>
+</div>
+</div>
+	  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+	
+
+function Query(){
+
+   
+
+        
+        var NID = document.getElementById('NID').value;
+
+
+        window.open("http://icu.smcegy.com/ICU/Requests/SearchSSN?SSN="+NID+"&NationalityId=1" ,'', 'width=240,height=380,top=100,left=200');}
+
+</script>
+</body>
+</html>
