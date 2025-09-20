@@ -108,6 +108,37 @@
         }
 
 
+    .info-list {
+      margin-bottom: 20px;
+    }
+
+    .price-list {
+      display: none;
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+
+    .price-list p {
+      margin: 5px 0;
+    }
+
+    button {
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+      background-color: #b17979;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background-color: gray;
+    }
 
  footer {
            
@@ -313,14 +344,24 @@
     </table>
 </div>
 -->
-<p>Passport Or ID scann with the marriage certificate ( if couple )</p>
-<p>Resignation Form</p>
-<p>Select room & get paid</p>
-<p>Wifi Password & breakfast from 8am - 11pm</p>
-<p>2 Books _ 3 what's groups _ Google form _ EN bookk site</p>
-<p> Single : start from 1500 LE</p>
-<p> Double : start from 1600 to 1800 LE </p>
-<p> Triple : start from 1900 to 2200 LE</p>
+
+<div class="info-list">
+  <ul>
+    <li><strong>Passport or ID scan with the marriage certificate (if couple)</strong></li>
+    <li><strong>Sign up Form (C.R)</strong></li>
+    <li><strong>Select room & get paid</strong></li>
+    <li><strong>Wifi Password & Breakfast: 8am - 11pm</strong></li>
+    <li><strong>2 Books, 3 WhatsApp Groups, Google Form, EN Book site</strong></li>
+    <li><strong>Receipt Handling</strong></li>
+  </ul>
+</div>
+<button onclick="togglePriceList()">P#L</button>
+    
+    <div class="price-list" id="priceList">
+      <p><strong>Single Room: </strong>Starts from 1500 LE</p>
+      <p><strong>Double Room: </strong>Starts from 1600 LE to 1800 LE</p>
+      <p><strong>Triple Room: </strong>Starts from 1900 LE to 2200 LE</p>
+    </div>
 
 <footer>
     <p>&copy; <span id="current-year"></span> - Powered by !-CODE M_G_X Servers. All Rights Reserved.</p>
@@ -361,9 +402,18 @@
     });
 }
 
+function togglePriceList() {
+      const priceList = document.getElementById('priceList');
+      if (priceList.style.display === 'none' || priceList.style.display === '') {
+        priceList.style.display = 'block';
+      } else {
+        priceList.style.display = 'none';
+      }
+    }
 
 document.getElementById("current-year").textContent = new Date().getFullYear();
 </script>
 
 </body>
 </html>
+
